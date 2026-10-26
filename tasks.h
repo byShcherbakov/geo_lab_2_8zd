@@ -1,0 +1,14 @@
+#pragma once
+#include "Model.h"
+Model task1(GLFWwindow*);
+Model task2(GLFWwindow*);
+Model task3(GLFWwindow*);
+Model task4(GLFWwindow*);
+Model task5_1(GLFWwindow*);
+Model task5_2(GLFWwindow*);
+Model task5_3_1(GLFWwindow*);
+Model task6(GLFWwindow*);
+Model task7(GLFWwindow*);
+Model task8a(GLFWwindow*);
+Model task8b(GLFWwindow*);
+Model task8c(GLFWwindow*);

@@ -1,0 +1,9 @@
+# ninja log v7
+66	663	8147472462164506	CMakeFiles/CompGeomGraphLab2.dir/Ui.cpp.obj	b29877e9981f816b
+34	1705	8147472461795487	CMakeFiles/CompGeomGraphLab2.dir/func.cpp.obj	2a270218887deaad
+52	1722	8147472461984986	CMakeFiles/CompGeomGraphLab2.dir/Demo.cpp.obj	bd8bffecee2393b7
+7	1805	8147472461516235	CMakeFiles/CompGeomGraphLab2.dir/Main.cpp.obj	9e4a9993059b9838
+39	1883	8147472461835386	CMakeFiles/CompGeomGraphLab2.dir/Model.cpp.obj	5b8531c16c2ee78f
+43	1978	8147472461885250	CMakeFiles/CompGeomGraphLab2.dir/tasks.cpp.obj	5d7dffee61b103e
+76	2030	8147472462215989	CMakeFiles/CompGeomGraphLab2.dir/Experiment.cpp.obj	19a91b8058e9bdde
+2031	2367	8147472481757208	CompGeomGraphLab2.exe	597cdee24ffbb0a7

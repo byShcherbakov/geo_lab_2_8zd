@@ -1,0 +1,3 @@
+C:/Users/shchi/OneDrive/Desktop/Lab2_VSCode/build-windows/CMakeFiles/CompGeomGraphLab2.dir
+C:/Users/shchi/OneDrive/Desktop/Lab2_VSCode/build-windows/CMakeFiles/edit_cache.dir
+C:/Users/shchi/OneDrive/Desktop/Lab2_VSCode/build-windows/CMakeFiles/rebuild_cache.dir

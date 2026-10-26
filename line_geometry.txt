@@ -1,0 +1,22 @@
+#version 330 core
+layout(lines) in;
+layout(triangle_strip,max_vertices=4) out;
+in VertexColor { vec3 smooth_color; flat vec3 flat_color; } input_color[];
+out VertexColor { vec3 smooth_color; flat vec3 flat_color; } output_color;
+uniform vec2 viewport_size;
+uniform float line_width;
+void emit_corner(int i,vec2 delta) {
+ gl_Position=gl_in[i].gl_Position;
+ gl_Position.xy+=delta*gl_Position.w;
+ output_color.smooth_color=input_color[i].smooth_color;
+ output_color.flat_color=input_color[1].flat_color;
+ EmitVertex();
+}
+void main() {
+ vec2 a=gl_in[0].gl_Position.xy/gl_in[0].gl_Position.w;
+ vec2 b=gl_in[1].gl_Position.xy/gl_in[1].gl_Position.w;
+ vec2 direction=(b-a)*viewport_size;
+ if(length(direction)<0.001)return;
+ vec2 n=normalize(vec2(-direction.y,direction.x))*line_width/viewport_size;
+ emit_corner(0,n);emit_corner(0,-n);emit_corner(1,n);emit_corner(1,-n);EndPrimitive();
+}

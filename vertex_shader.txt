@@ -1,0 +1,12 @@
+#version 330 core
+layout(location=0) in vec3 vertex_position;
+layout(location=1) in vec3 vertex_color;
+out VertexColor { vec3 smooth_color; flat vec3 flat_color; } vertex_out;
+uniform float point_size;
+uniform bool mirror_x;
+void main() {
+ gl_Position=vec4(vertex_position,1.0);
+ if(mirror_x)gl_Position.x=-gl_Position.x;
+ gl_PointSize=point_size;
+ vertex_out.smooth_color=vertex_color;vertex_out.flat_color=vertex_color;
+}

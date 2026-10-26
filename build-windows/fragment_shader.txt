@@ -1,0 +1,15 @@
+#version 330 core
+in VertexColor { vec3 smooth_color; flat vec3 flat_color; } fragment_in;
+uniform bool smooth_shading;
+uniform bool round_points;
+out vec4 frag_color;
+void main() {
+ float alpha=1.0;
+ if(round_points) {
+  float d=length(gl_PointCoord-vec2(0.5));
+  float edge=fwidth(d);
+  alpha=1.0-smoothstep(0.5-edge,0.5,d);
+  if(alpha<=0.0)discard;
+ }
+ frag_color=vec4(smooth_shading?fragment_in.smooth_color:fragment_in.flat_color,alpha);
+}

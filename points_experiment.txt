@@ -1,0 +1,34 @@
+Task 1. Variant 2. Point-size experiment
+Method: GL_POINTS + fragment-shader AA (smoothstep/fwidth), RGBA8, no MSAA.
+Maximum is for this implementation, not legacy GL_POINT_SMOOTH.
+GPU: NVIDIA GeForce GTX 1650/PCIe/SSE2
+Vendor: NVIDIA Corporation
+OpenGL: 3.3.0 NVIDIA 560.94
+Driver maximum: 2047 framebuffer pixels.
+Test limit: 2047 px.
+Pass: measured center width differs by <=2 px, and partially covered edge pixels exist.
+requested,AA,measured_width,gray_edge_pixels,GL_error,pass
+4,off,4,0,0,no
+4,on,3,5,0,yes
+8,off,8,0,0,no
+8,on,7,5,0,yes
+16,off,16,0,0,no
+16,on,15,2,0,yes
+32,off,32,0,0,no
+32,on,31,2,0,yes
+64,off,64,0,0,no
+64,on,63,2,0,yes
+128,off,128,0,0,no
+128,on,127,4,0,yes
+256,off,256,0,0,no
+256,on,255,2,0,yes
+512,off,512,0,0,no
+512,on,511,2,0,yes
+1024,off,1024,0,0,no
+1024,on,1023,4,0,yes
+2047,off,2047,0,0,no
+2047,on,2047,4,0,yes
+2051,on,2047,4,0,no
+
+Largest verified size: 2047 px.
+The measured size reaches the driver upper bound.
